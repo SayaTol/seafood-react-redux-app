@@ -1,12 +1,15 @@
-import Recipies from "../pages/Recipies";
+import SearchField from "./SearchField";
+import Recipies from "../pages/Recipies"
 
 function Home() {
+
+
 
   return (
 
     <div className="App">
-
-      <Recipies />
+      < SearchField />
+      <Recipies/>
     </div>
 
   )

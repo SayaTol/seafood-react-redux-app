@@ -1,36 +1,60 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit"
 
 
+
+
 export const callAPI = createAsyncThunk(
-  'api/recipies',
-  async (obj, {state, error}) => {
+  'recipes/callAPI',
+  async () => {
     try {
-      const req = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-      const res = await req.json()
-      return res.meals
-      //
-    } catch (err) {
-      console.log(err)
-      return []
+
+      const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
+      const data = await response.json()
+      console.log(data, "this is filter")
+      return data.meals
+
     }
+
+    catch (err) {
+
+      console.log(err, "api is not correct ")
+    }
+
   }
 )
 
+
+
+
+
 const recipiesSlice = createSlice({
   name: 'meals',
-  initialState: [],
+  initialState: {
+    recipes: [],
+
+    status: null,
+    error: null,
+  },
+
   reducers: {},
   extraReducers: {
-    [callAPI.pending]: (state, action) => {
-      return []
+    [callAPI.pending]: (state) => {
+      state.status = "loading";
+      state.error = null
     },
     [callAPI.fulfilled]: (state, action) => {
-      return action.payload;
+      state.status = "resolved";
+      state.recipes = action.payload;
+
+
     },
     [callAPI.rejected]: (state, action) => {
-      return []
+      state.status = "rejected";
+      state.error = action.payload
     },
+
   },
+
 })
 
 
