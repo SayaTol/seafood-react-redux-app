@@ -53,7 +53,16 @@ function Recipies() {
 		<>
 			<h1 className="title"> Seafood recipes for every day </h1>
 
-			
+			<div className="all-btn">
+				<Link to={`/page/${pageNow < 1 ? 1 : pageNow}`}>
+					<button
+					className="btn-prev"
+					onClick={() => setPageNow((prev) => (prev < 1 ? 0 : prev - 1))}
+					>
+						Prev
+
+					</button>
+				</Link>
 			{btn.map((btn, index) => {
 				return (
 					<Link to={`/page/${index + 1}`}>
@@ -67,7 +76,18 @@ function Recipies() {
 					</Link>
 				);
 			})}
-			
+			<Link to={`/page/${pageNow > 5 ? 5 : pageNow + 1}`}>
+				<button
+				className="btn-next"
+				onClick={() => 
+				  setPageNow((prev) => prev + 1)
+				  }
+				  >
+					  Next
+
+				</button>
+			</Link>
+			</div>
 
 			<Grid container spacing={2} style={styleHeader}>
 				{allRecipies.slice(start, end).map((recipe) => {
