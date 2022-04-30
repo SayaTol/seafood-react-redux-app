@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
-/* import PhishingIcon from '@mui/icons-material/Phishing';
-import ManageSearchIcon from '@mui/icons-material/ManageSearch'; */
+import PhishingIcon from '@mui/icons-material/Phishing';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch'; 
 import {debounce} from 'lodash'
 import {useDispatch} from "react-redux";
 import {callAPI2} from "../app/searchSlice"
@@ -87,12 +87,12 @@ export default function SearchField() {
               sx={{mr: 2}}
 
             >
-              {/* { <PhishingIcon /> } */}
+               <PhishingIcon /> 
             </IconButton>
           </Link>
           <Search>
             <SearchIconWrapper>
-              {/* { <ManageSearchIcon /> } */}
+             <ManageSearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
 
