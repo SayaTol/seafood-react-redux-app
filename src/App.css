@@ -12,10 +12,31 @@ body {
 	margin: 10px;
 }
 
-.pagination {
-	padding: 5px 7px;
+.pagination, .btn-prev, .btn-next {
+	padding: 5px 12px;
 	margin: 0 3px 20px 3px;
 	border: none;
-	background-color: rgb(118, 179, 239);
-	color: #fff;
+	background-color: #fff;
+	color: rgb(36, 191, 211);
+	border-radius: 5px;
+	font-size: 1rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-prev, .btn-next {	
+	background-color: rgb(20, 203, 228);
+	color: #fff;	
+}
+
+.loading{
+	text-align: center;
+	font-size: 60px;
+	margin-top: 50vh;
+	color: white;
+}
+
+.title {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-variant-east-asian: full-width;
+	color: whitesmoke;	
 }

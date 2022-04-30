@@ -25,9 +25,10 @@ class App extends React.Component {
 
 
   render() {
-    return this.state.isLoading ? <h2 style={{textAlign: "center"}}>Loading....</h2> :
+    return this.state.isLoading ? (<h2 className="loading">. . . LOADING . . .</h2> ) :
       <Routes>
         <Route exact path='/' element={<Home />} />
+        <Route path="*" element={<Home />} />
       </Routes>
   }
 

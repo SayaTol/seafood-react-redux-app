@@ -87,12 +87,12 @@ export default function SearchField() {
               sx={{mr: 2}}
 
             >
-              {/* <PhishingIcon /> */}
+              {/* { <PhishingIcon /> } */}
             </IconButton>
           </Link>
           <Search>
             <SearchIconWrapper>
-              {/* <ManageSearchIcon /> */}
+              {/* { <ManageSearchIcon /> } */}
             </SearchIconWrapper>
             <StyledInputBase
 
