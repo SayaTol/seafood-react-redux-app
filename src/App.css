@@ -2,6 +2,10 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	background-image: url(./image/bg.jpg);
+	background-repeat: repeat;
+	background-size: cover;
+	height: 100vh;
 }
 .App {
 	text-align: center;
